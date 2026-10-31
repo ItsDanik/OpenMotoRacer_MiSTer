@@ -6,6 +6,7 @@
 /package/oled/MotoRacer_*
 /package/screens/MotoRacer.png
 /docs/screenshot*.png
+/docs/banner.png
 
 # Logs of builds
 *.log
