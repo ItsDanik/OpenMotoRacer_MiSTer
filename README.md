@@ -125,7 +125,7 @@ Change the buttons in the OSD under *Define OpenMotoRacer buttons*. *Menu OK* an
 > [!WARNING]
 > A button left without a name in *Define OpenMotoRacer buttons* does not reach the game at all, except L2/R2, L3/R3 and *Menu OK* / *Menu Back*. Name every button there, or leave the definition as it is. To go back to the default buttons, delete `config/inputs/OpenMotoRacer_input_*_v3.map` on the SD card.
 
-The game's own menu can change what each gamepad button does: *Options*, *Config* next to *Controller*. Change the actions there rather than in the OSD; a button the OSD leaves without a name never reaches the game, so its menu cannot bind it.
+The game's own menu can change what each gamepad button does: *Options*, *Config* next to *Controller*. Change the actions there rather than in the OSD; a button the OSD leaves without a name never reaches the game, so its menu cannot bind it. Y stops changing the camera once an action there uses it.
 
 Typing a name without a keyboard: on the name page move to a letter and press A. For a record, up/down changes the letter, right adds one, left takes one away, Menu OK confirms.
 
