@@ -15,6 +15,6 @@
 
 - The game's own record is `openmotoracer/docs/NOTES.md`, section 4.25: resolutions, the 640x240 design, input, measurements.
 - Danik's decisions (2026-10-31): one menu entry for either copy (GOG's first); race resolutions 320x240 (default), 640x240, 640x480 or 480i, no 200-line modes (the original has none); Limit to 30 FPS off by default; HUD margins top and bottom; the logo from the game's art; A accelerate, B brake, X turbo/stunt, Y camera, L/R gears, Select look back, Start pause, R2/L2 by degrees, L3 dashboard, R3 map; cheats: the game's three, No Time Limit, Slow Rivals.
-- `DRAW_AHEAD` 1: benchmark Speed Bay, 24 riders, in turns: at 320x240 0-13 frames never shown a 300 and 0-24 twice with it, 25-54 and 36-53 without; at 640x240 no difference (0 never, 117-190 twice with it; 0-3 and 108-156 without). Written out in NOTES 4.25.
-- 640x480i races run at 24-29 pictures a second (26-33 ms each, a frame every two fields at most); 640x240 at 33-45, or 29.8 steady with Limit to 30 FPS; 320x240 at 57-60. No 512x384 and no 16:9 on the MiSTer.
+- Speeds on the real core (Speed Bay, 24 riders, 2026-11-01): 320x240 a steady 59.6 (10-14 ms a picture), 640x240 53-60 (14-19 ms), 640x480i 28.5-30 (23-33 ms, a frame every two fields at most). Written out in NOTES 4.25 with what was done: own sound lock and music thread, direct drawing, lazy 2D rows at 640x240, loops split by kind, the ARM build in Thumb with LTO (`port/CMakeLists.txt`). PGO about 2%, dropped.
+- `DRAW_AHEAD` 1: a clear gain at 320x240, nothing lost at 640x240 (runs in NOTES 4.25). No 512x384 and no 16:9 on the MiSTer.
 - The logo, OLED art and screenshots are made from the game's art and stay out of git (`.gitignore`) until Danik decides about publishing them.
