@@ -1,0 +1,8 @@
+[submodule "hybrid"]
+	path = hybrid
+	url = https://github.com/ItsDanik/Hybrid_MiSTer.git
+	branch = main
+[submodule "openmotoracer"]
+	path = openmotoracer
+	url = /home/danik/openmotoracer
+	branch = mister

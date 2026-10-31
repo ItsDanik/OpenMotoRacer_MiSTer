@@ -1,0 +1,20 @@
+# OpenMotoRacer hybrid core for MiSTer (Moto Racer)
+
+@hybrid/CLAUDE.md
+
+## This core
+
+- Name everywhere: `OpenMotoRacer` (the engine: core, folders `games/dnk/OpenMotoRacer/` and `logs/dnk/OpenMotoRacer/`, `_Other/dnk/dnk-OpenMotoRacer_*.rbf`, release), `openmotoracer` (game submodule, binary in `build/`, log, lock). The games and their menu entries (`_Other/dnk-<title>.mgl`): `package/games.txt` (in the zip as `games/dnk/OpenMotoRacer/games.txt`, from which the database's build makes the launcher's catalogue).
+- The game is the `openmotoracer/` submodule, branch `mister`. Its MiSTer code is behind the `MISTER_HYBRID` build option.
+- Build: `./build.sh` (game), `./core/build_core.sh` (FPGA), `./package.sh` (zip in `dist/`), `MISTER=root@<address> tools/deploy.sh` (its menu entries in `_Test`, the main menu's *Test*).
+- Release: the zip in `releases/`. Players get it once it is published to the database, only when Danik asks: `hybrid/launcher/distribution.py publish ~/dnk_Distribution_MiSTer releases/OpenMotoRacer_YYYYMMDD.zip` (the rule in `hybrid/CLAUDE.md`).
+- Try a build on the MiSTer without installing it: `MISTER=root@<address> tools/test_on_mister.sh <id>|list|nodata|log|stop` (the rule in `hybrid/CLAUDE.md`).
+- Lines marked `GAME:` in the scripts and `TODO` in the READMEs are the places the template left for this game.
+
+<!-- Notes that are only true for this game go below. -->
+
+- The game's own record is `openmotoracer/docs/NOTES.md`, section 4.25: resolutions, the 640x240 design, input, measurements.
+- Danik's decisions (2026-10-31): one menu entry for either copy (GOG's first); race resolutions 320x240 (default), 640x240, 640x480 or 480i, no 200-line modes (the original has none); Limit to 30 FPS off by default; HUD margins top and bottom; the logo from the game's art; A accelerate, B brake, X turbo/stunt, Y camera, L/R gears, Select look back, Start pause, R2/L2 by degrees, L3 dashboard, R3 map; cheats: the game's three, No Time Limit, Slow Rivals.
+- `DRAW_AHEAD` 1: benchmark Speed Bay, 24 riders, in turns: at 320x240 0-13 frames never shown a 300 and 0-24 twice with it, 25-54 and 36-53 without; at 640x240 no difference (0 never, 117-190 twice with it; 0-3 and 108-156 without). Written out in NOTES 4.25.
+- 640x480i races run at 24-29 pictures a second (26-33 ms each, a frame every two fields at most); 640x240 at 33-45, or 29.8 steady with Limit to 30 FPS; 320x240 at 57-60. No 512x384 and no 16:9 on the MiSTer.
+- The logo, OLED art and screenshots are made from the game's art and stay out of git (`.gitignore`) until Danik decides about publishing them.

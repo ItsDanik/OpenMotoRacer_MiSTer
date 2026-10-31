@@ -1,0 +1,15 @@
+# Game data is copyrighted and never committed
+/Moto Racer/
+/Moto Racer CD/
+# Made from the game's own art: local until Danik decides about publishing
+/package/logos/MotoRacer.png
+/package/oled/MotoRacer_*
+/package/screens/MotoRacer.png
+/docs/screenshot*.png
+
+# Logs of builds
+*.log
+
+# Build outputs
+/build/
+/dist/

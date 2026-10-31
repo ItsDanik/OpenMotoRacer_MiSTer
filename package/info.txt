@@ -1,0 +1,4 @@
+# The games of package/games.txt for dnkLauncher, the frontend (hybrid/docs/dnklauncher.md),
+# a line each: <id>|<year>|<developer>|<description>. The description is shown on the
+# game's Details page, at most 4 lines there (about 340 characters).
+MotoRacer|1997|Delphine Software|Road bikes and motocross on sunny coasts, snow and ruins: fast arcade racing against 23 riders, wheelies and stoppies at every chance, a championship to win and the winner's lap at the end. The racing game from the makers of Flashback.
