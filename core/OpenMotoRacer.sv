@@ -67,7 +67,7 @@ localparam CONF_STR = {
 	// hybrid/README.md "Video modes"): hidden in a core without it (FLICKER 0,
 	// menu mask bit 9), greyed out while the picture is not interlaced (bit 10)
 	"H9P1-;",
-	"H9DAP1O[106:105],Flicker Filter,Light,Strong,Off;",
+	"H9DAP1O[106:105],Flicker Filter,Strong,Light,Off;",
 	// GAME: the HUD margins (MH_HudMargins(), hybrid/README.md "HUD
 	// margins"): pixels between the HUD and the top / bottom edge of a
 	// 240-line screen, 0 the default (host version 16; up to 15 entry 0 was
@@ -93,8 +93,9 @@ localparam CONF_STR = {
 	// host version 16 (a trigger, which the core flips), 17..23 unused.
 	// The game's options (openmotoracer/port/src/mister.c). Resolution is the
 	// race's: the menus exist only at 640x480. No 200-line modes: the original
-	// has none (Danik, 2026-10-31), nor 512x384: the core has no such mode.
-	"O[25:24],Resolution,320x240,640x240,640x480;",
+	// has none (Danik, 2026-10-31), no 640x480 race (Danik, 2026-11-01), nor
+	// 512x384: the core has no such mode.
+	"O[24],Resolution,320x240,640x240;",
 	"O[26],Limit to 30 FPS,Off,On;",
 	"O[27],Smooth Motion,On,Off;",
 	"O[28],Analog,On,Off;",
@@ -170,7 +171,7 @@ localparam INTRO = 1;
 // the OSD's Flicker Filter line (host version 18). It costs two more line
 // buffers and two more copies of the palette, 12 M10K blocks; 0 hides the line.
 // 2: as 1 with Strong the default (the line's entries "Strong,Light,Off")
-localparam FLICKER = 1;
+localparam FLICKER = 2;
 
 wire         forced_scandoubler;
 wire         direct_video;

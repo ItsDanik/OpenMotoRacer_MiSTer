@@ -4,7 +4,7 @@
 
 Moto Racer on [MiSTer FPGA](https://github.com/MiSTer-devel/Main_MiSTer/wiki) as a hybrid port.
 
-The game is [OpenMotoRacer](https://github.com/ItsDanik/openmotoracer), a new program written by hand to do what Delphine Software's 1997 program does, software renderer included, reading its tables from your own copy of the game. It runs on the MiSTer's ARM CPU. The OpenMotoRacer FPGA core provides native 15kHz video (CRT, VGA and HDMI) at 320x240, 640x240 and 640x480, 44.1kHz audio and keyboard, mouse and gamepad input. The two halves talk through shared DDR3 memory.
+The game is [OpenMotoRacer](https://github.com/ItsDanik/openmotoracer), a new program written by hand to do what Delphine Software's 1997 program does, software renderer included, reading its tables from your own copy of the game. It runs on the MiSTer's ARM CPU. The OpenMotoRacer FPGA core provides native 15kHz video (CRT, VGA and HDMI) at 320x240 and 640x240 in a race and 640x480 in the menus, 44.1kHz audio and keyboard, mouse and gamepad input. The two halves talk through shared DDR3 memory.
 
 > **Beta.** Expect rough edges and please report problems in the issues.
 >
@@ -71,8 +71,8 @@ Run it from the `Scripts` menu again whenever you want to change something. Its 
 | Aspect ratio, Scale, Scandoubler Fx, Stereo Mix | as in other cores |
 | FPS Counter | shows the pictures per second in the top left corner |
 | HDMI Only | **Yes** if no CRT is connected: resolutions of 640x400 and more are then progressive instead of interlaced, and so is the core's own screen before the game, which moves at 60 pictures a second for a CRT and shows fine lines on HDMI without it. The analog output is switched off while one is shown, so that a 15kHz screen can never get such a signal. Nothing changes at lower resolutions. Not needed with `forced_scandoubler=1` (VGA monitor); not there with `direct_video=1` |
-| CRT Options | **Horizontal Size**: the picture's width<br>**Horizontal Pos**: moves it left or right<br>**Vertical Pos**: moves it up or down<br>**HUD (Top)**: moves the lap, time and position texts and the turn signs down<br>**HUD (Bottom)**: moves the dials and the bottom texts up<br>**Flicker Filter**: Light (default), Strong or Off: softens fine lines that blink while the picture is interlaced<br><br>For a 15kHz screen: fits the picture to it and keeps the HUD out of the overscan. HDMI is not affected but by the Flicker Filter; not there with `forced_scandoubler=1` |
-| Resolution | **320x240** (default)<br>**640x240**<br>**640x480**: interlaced on a CRT, at most 30 pictures a second<br><br>The race's picture; the menus are always 640x480. 320x240 holds a steady 60 pictures a second, 640x240 between 53 and 60 in the heaviest races |
+| CRT Options | **Horizontal Size**: the picture's width<br>**Horizontal Pos**: moves it left or right<br>**Vertical Pos**: moves it up or down<br>**HUD (Top)**: moves the lap, time and position texts and the turn signs down<br>**HUD (Bottom)**: moves the dials and the bottom texts up, and Options and Exit in the main menu<br>**Flicker Filter**: Strong (default), Light or Off: softens fine lines that blink while the picture is interlaced<br><br>For a 15kHz screen: fits the picture to it and keeps the HUD out of the overscan. HDMI is not affected but by the Flicker Filter; not there with `forced_scandoubler=1` |
+| Resolution | **320x240** (default)<br>**640x240**<br><br>The race's picture; the menus are always 640x480. 320x240 holds a steady 60 pictures a second, 640x240 between 53 and 60 in the heaviest races |
 | Limit to 30 FPS | **Off** (default) or **On**: a steady 30 pictures a second for 640x240, in place of a rate that changes |
 | Smooth Motion | **On** (default): pictures between the game's steps, as smooth as the screen<br>**Off**: the game's steps as they are |
 | Analog | **On** (default): the stick and the triggers work by degrees<br>**Off**: all or nothing |
@@ -94,7 +94,7 @@ Run it from the `Scripts` menu again whenever you want to change something. Its 
 | Tab | look back |
 | Esc, Pause | the race's menu, pause |
 | F1 | the game's help, with every other key |
-| F2, F3 | lower or higher resolution |
+| F2, F3 | the other resolution |
 | F5, F6 | camera distance, on-board view |
 | F7, F8, F9 | dashboard, turn signs, map |
 | F10 | Smooth Motion |
