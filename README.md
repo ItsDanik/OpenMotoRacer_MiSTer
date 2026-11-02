@@ -72,8 +72,8 @@ Run it from the `Scripts` menu again whenever you want to change something. Its 
 | FPS Counter | shows the pictures per second in the top left corner |
 | HDMI Only | **Yes** if no CRT is connected: resolutions of 640x400 and more are then progressive instead of interlaced, and so is the core's own screen before the game, which moves at 60 pictures a second for a CRT and shows fine lines on HDMI without it. The analog output is switched off while one is shown, so that a 15kHz screen can never get such a signal. Nothing changes at lower resolutions. Not needed with `forced_scandoubler=1` (VGA monitor); not there with `direct_video=1` |
 | CRT Options | **Horizontal Size**: the picture's width<br>**Horizontal Pos**: moves it left or right<br>**Vertical Pos**: moves it up or down<br>**HUD (Top)**: moves the lap, time and position texts and the turn signs down<br>**HUD (Bottom)**: moves the dials and the bottom texts up, and Options and Exit in the main menu<br>**Flicker Filter**: Strong (default), Light or Off: softens fine lines that blink while the picture is interlaced<br><br>For a 15kHz screen: fits the picture to it and keeps the HUD out of the overscan. HDMI is not affected but by the Flicker Filter; not there with `forced_scandoubler=1` |
-| Resolution | **320x240** (default)<br>**640x240**<br><br>The race's picture; the menus are always 640x480. 320x240 holds a steady 60 pictures a second, 640x240 between 53 and 60 in the heaviest races |
-| Limit to 30 FPS | **Off** (default) or **On**: a steady 30 pictures a second for 640x240, in place of a rate that changes |
+| Resolution | **320x240** (default)<br>**640x240**<br><br>The race's picture; the menus are always 640x480. Both hold a steady 60 pictures a second |
+| Limit to 30 FPS | **Off** (default) or **On**: a steady 30 pictures a second |
 | Smooth Motion | **On** (default): pictures between the game's steps, as smooth as the screen<br>**Off**: the game's steps as they are |
 | Analog | **On** (default): the stick and the triggers work by degrees<br>**Off**: all or nothing |
 | Rumble | **On** (default) or **Off**: the gamepad's rumble |

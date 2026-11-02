@@ -7,7 +7,7 @@ How the port works and how it is built. For playing it, see the [README](README.
 The game's own record is `openmotoracer/docs/NOTES.md`, section 4.25: the resolutions, the 640x240 design, the input and the measurements; the game is written from the 1997 program, each of its routines by address, in the same file.
 
 - **640x240**: the game believes it is at 320x240, so texts and dials stay readable. Only the 3D is drawn at 640x480 on the even rows; the 2D is drawn at 320x240 over a sample of the 3D and the pixels it changed are merged doubled across, row by row as they are needed.
-- **Speed** on the real core (Speed Bay, 24 riders): 320x240 a steady 59.6 pictures a second, 640x240 53-60. The race is drawn straight into the core's next buffer, the sound's mixer and the music's file reads don't hold up the drawing, and the ARM build is Thumb with whole-program optimisation.
+- **Speed** on the real core (every track, 24 riders): 320x240 and 640x240 a steady 59.6 pictures a second. Both CPUs draw the race, each every other row; the race is drawn straight into the core's next buffer, the sound's mixer and the music's file reads don't hold up the drawing, and the ARM build is Thumb with whole-program optimisation.
 - **Moving a resolution** in the OSD or with the game's keys does the same thing: the last one moved wins.
 
 ## Building
