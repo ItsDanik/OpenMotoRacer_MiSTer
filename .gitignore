@@ -2,8 +2,7 @@
 /Moto Racer/
 /Moto Racer CD/
 # Made from the game's own art: local until Danik decides about publishing
-/package/logos/MotoRacer.png
-/package/oled/MotoRacer_*
+/package/oled/MotoRacer_icon.png
 /package/screens/MotoRacer.png
 /docs/screenshot*.png
 /docs/banner.png
