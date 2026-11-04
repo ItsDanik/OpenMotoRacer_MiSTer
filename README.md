@@ -33,7 +33,7 @@ With `update_all` (Downloader 2.4 or newer, which update_all keeps up to date):
    | Your copy | Goes in | Known by |
    |---|---|---|
    | GOG's, as installed | `Moto Racer/` | `game.EXE`, `data/`, `02.wav` to `13.wav` |
-   | The 1997 CD's files and its image | `Moto Racer/`, or `Moto Racer CD/` next to GOG's | `DISK1/`, `DATA/`, its `.cue` and `.bin` (the image holds the music) |
+   | The 1997 CD's files, and its image or its music as files | `Moto Racer/`, or `Moto Racer CD/` next to GOG's | `DISK1/`, `DATA/`, and for the music the image's `.cue` and `.bin`, or the CD's tracks as files in `music/`: `track02.ogg` to `track13.ogg` (`.mp3` or `.wav` do as well) |
 
 5. Load the game from the `Other` menu, e.g. **dnk-Moto Racer**, or from the `Hybrid Ports` folder if you moved the games there in the launcher.
 
