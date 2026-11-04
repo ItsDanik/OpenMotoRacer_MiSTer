@@ -4,7 +4,7 @@
 
 Moto Racer on [MiSTer FPGA](https://github.com/MiSTer-devel/Main_MiSTer/wiki) as a hybrid port.
 
-The game is [OpenMotoRacer](https://github.com/ItsDanik/openmotoracer), a new program written by hand to do what Delphine Software's 1997 program does, software renderer included, reading its tables from your own copy of the game. It runs on the MiSTer's ARM CPU. The OpenMotoRacer FPGA core provides native 15kHz video (CRT, VGA and HDMI) at 320x240 and 640x240 in a race and 640x480 in the menus, 44.1kHz audio and keyboard, mouse and gamepad input. The two halves talk through shared DDR3 memory.
+The game is [OpenMotoRacer](https://github.com/ItsDanik/OpenMotoRacer), a new program written by hand to do what Delphine Software's 1997 program does, software renderer included, reading its tables from your own copy of the game. It runs on the MiSTer's ARM CPU. The OpenMotoRacer FPGA core provides native 15kHz video (CRT, VGA and HDMI) at 320x240 and 640x240 in a race and 640x480 in the menus, 44.1kHz audio and keyboard, mouse and gamepad input. The two halves talk through shared DDR3 memory.
 
 > **Beta.** Expect rough edges and please report problems in the issues.
 >
@@ -120,7 +120,7 @@ Run it from the `Scripts` menu again whenever you want to change something. Its 
 | R2, L2 | accelerate, brake, by degrees |
 | L3, R3 | dashboard, map |
 
-Change the buttons in the OSD under *Define OpenMotoRacer buttons*. *Menu OK* and *Menu Back* there are only needed for a spare button without a game function. While the OSD is open, the game gets no input.
+Change the buttons in the OSD under *Define OpenMotoRacer buttons*. The game's menus confirm and go back with your MiSTer menu's *Menu OK* / *Menu Back* buttons, also when they are game actions too. While the OSD is open, the game gets no input.
 
 > [!WARNING]
 > A button left without a name in *Define OpenMotoRacer buttons* does not reach the game at all, except L2/R2, L3/R3 and *Menu OK* / *Menu Back*. Name every button there, or leave the definition as it is. To go back to the default buttons, delete `config/inputs/OpenMotoRacer_input_*_v3.map` on the SD card.

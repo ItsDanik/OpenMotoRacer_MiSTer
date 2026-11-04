@@ -4,5 +4,5 @@
 	branch = main
 [submodule "openmotoracer"]
 	path = openmotoracer
-	url = /home/danik/openmotoracer
+	url = https://github.com/ItsDanik/OpenMotoRacer.git
 	branch = mister
