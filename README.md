@@ -43,7 +43,7 @@ With `update_all` (Downloader 2.4 or newer, which update_all keeps up to date):
 > [!IMPORTANT]
 > **HDMI or VGA:** if you play on HDMI or on a VGA monitor rather than a 15kHz CRT, open the OSD and set *HDMI Only* to **Yes**. The game's menus are drawn at 640x480, which is interlaced for a CRT and shows combing on any other screen without it.
 
-The game's log is in `/media/fat/logs/dnk/OpenMotoRacer/openmotoracer.log`. Settings, records, championships and time attack ghosts are in `games/dnk/OpenMotoRacer/saves/`. There is one menu entry for either copy: with both copies there GOG's is played, and *Game Behaviour* on the game's *Options* page picks which program's ways the game follows.
+The game's log is in `/media/fat/logs/dnk/OpenMotoRacer/openmotoracer.log`. Settings, records, championships and time attack ghosts are in `games/dnk/OpenMotoRacer/saves/`. There is one menu entry for either copy: with both copies there GOG's is played. The two releases' programs do not play quite the same, and *Game Behaviour* on the game's *Options* page (*1997 CD* or *GOG Release*) picks which one the game follows, with either copy's files. *1997 CD* rides as the original disc did (how the bike leans, steers and slides, engine braking and the crash's bounce), its music stops at a track's end before it starts again and holds during a pause, and it has the disc's few small differences on screen (the podium, the bike's page, the sky and the shadows). *GOG Release* follows the 1998 patch that GOG sells, its music looping and playing on through a pause. Until you choose, it follows the copy you play, and your choice is kept with the settings.
 
 ## The launcher
 
